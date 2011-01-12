@@ -85,6 +85,7 @@ perl -pi -e 's|@@FREEMAT_DIR@@|%{freemat_dir}|;'	\
 	libs/libMath/libDynBlas/blas_dyn_link.cpp
 
 %patch4		-p1
+%patch5		-p1
 
 #-------------------------------------------------------------------------------
 %build
@@ -93,12 +94,16 @@ export CXXFLAGS="`echo %{optflags} | sed 's/-O[0-9]/-O1/'` -fPIC -funsigned-char
 
 (
 %cmake	-DCMAKE_INSTALL_PREFIX:PATH=%{_prefix}		\
+	-DCMAKE_CXX_FLAGS_RELEASE_INIT="$CXXFLAGS"	\
+	-DCMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS"		\
+	-DCMAKE_C_FLAGS_RELEASE_INIT="$CFLAGS"		\
+	-DCMAKE_C_FLAGS_RELEASE="$CFLAGS"		\
 %if %{with_llvm}
 	-DUSE_LLVM:BOOL=ON
 %else
 	-DUSE_LLVM:BOOL=OFF
 %endif
-%make CFLAGS="$CFLAGS" CXXFLAGS="$CXXFLAGS"
+%make
 )
 
 #-------------------------------------------------------------------------------
