@@ -23,6 +23,7 @@ BuildRequires:	amd-devel
 BuildRequires:	cmake
 BuildRequires:	dos2unix
 BuildRequires:	f2c
+BuildRequires:	ffcall-devel
 BuildRequires:	fftw-devel
 BuildRequires:	gcc-gfortran
 BuildRequires:	GL-devel
@@ -46,6 +47,7 @@ Patch2:		FreeMat-4.0-missing.patch
 Patch3:		FreeMat-4.0-blas.patch
 Patch4:		FreeMat-4.0-freemat_dir.patch
 Patch5:		FreeMat-4.0-install_libs.patch
+Patch6:		http://projects.archlinux.org/svntogit/community.git/plain/freemat/trunk/input-fix.patch
 
 #-------------------------------------------------------------------------------
 %description
@@ -86,6 +88,7 @@ perl -pi -e 's|@@FREEMAT_DIR@@|%{freemat_dir}|;'	\
 
 %patch4		-p1
 %patch5		-p1
+%patch6		-p1
 
 #-------------------------------------------------------------------------------
 %build
