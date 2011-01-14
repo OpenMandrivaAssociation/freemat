@@ -7,15 +7,15 @@ Name:		freemat
 Group:		Sciences/Mathematics
 License:	GPL
 Summary:	rapid engineering, scientific prototyping and data processing
-Version:	4.1.20110113
+Version:	4.1.0.20110113
 Release:	%mkrel 1
 URL:		http://freemat.sourceforge.net
 # svn co https://freemat.svn.sourceforge.net/svnroot/freemat/trunk/FreeMat freemat
-# cp -far freemat freemat-4.1.20110113
-# cd freemat-4.1.20110113
+# cp -far freemat freemat-4.1.0.20110113
+# cd freemat-4.1.0.20110113
 # find . -name .svn -exec rm -fr {} \; 2>/dev/null
 # cd ..
-# tar Jcf freemat-4.1.20110113.tar.xz freemat-4.1.20110113
+# tar Jcf freemat-4.1.0.20110113.tar.xz freemat-4.1.0.20110113
 Source0:	%{name}-%{version}.tar.xz
 Source1:	http://www.netlib.org/lapack/lapack-3.2.2.tgz
 Source2:	http://www.netlib.org/clapack/CLAPACK-3.1.1/F2CLIBS/libf2c/pow_ii.c
