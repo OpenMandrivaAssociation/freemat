@@ -32,6 +32,7 @@ BuildRequires:	gcc-gfortran
 BuildRequires:	GL-devel
 BuildRequires:	libatlas-devel
 BuildRequires:	llvm
+BuildRequires:	ncurses-devel
 BuildRequires:	pcre-devel
 BuildRequires:	portaudio-devel
 BuildRequires:	qt4-devel
