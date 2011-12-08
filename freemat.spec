@@ -57,7 +57,7 @@ Mathworks, and IDL from Research Systems, but is Open Source.
 %prep
 %setup -q -n %{name}-%{version} -a 1
 
-for file in `find . -name CMake\*.txt`; do dos2unix -U $file; done
+for file in `find . -name CMake\*.txt`; do dos2unix $file; done
 
 # undefined references
 %patch1		-p1
