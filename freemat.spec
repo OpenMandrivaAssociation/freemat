@@ -8,7 +8,7 @@ Group:		Sciences/Mathematics
 License:	GPL
 Summary:	rapid engineering, scientific prototyping and data processing
 Version:	4.1.0.20110113
-Release:	%mkrel 1
+Release:	%mkrel 2
 URL:		http://freemat.sourceforge.net
 # svn co https://freemat.svn.sourceforge.net/svnroot/freemat/trunk/FreeMat freemat
 # cp -far freemat freemat-4.1.0.20110113
