@@ -1,0 +1,88 @@
+--- FreeMat-4.0.1-Source/libs/libMath/libLAPACK_C/CMakeLists.txt.orig	2011-01-12 14:21:34.952973956 -0200
++++ FreeMat-4.0.1-Source/libs/libMath/libLAPACK_C/CMakeLists.txt	2011-01-12 14:21:43.427973969 -0200
+@@ -146,6 +146,7 @@ dlacon.c
+ dlacpy.c
+ dladiv.c
+ dlae2.c
++dlaed6.c
+ dlaev2.c
+ dlaexc.c
+ dlag2.c
+@@ -154,6 +155,7 @@ dlahrd.c
+ dlaic1.c
+ dlaln2.c
+ dlamch.c
++dlamrg.c
+ dlange.c
+ dlanhs.c
+ dlanst.c
+@@ -179,6 +181,18 @@ dlarzb.c
+ dlarzt.c
+ dlas2.c
+ dlascl.c
++dlasd0.c
++dlasd1.c
++dlasd2.c
++dlasd3.c
++dlasd4.c
++dlasd5.c
++dlasd6.c
++dlasd7.c
++dlasd8.c
++dlasda.c
++dlasdq.c
++dlasdt.c
+ dlaset.c
+ dlasq1.c
+ dlasq2.c
+@@ -243,6 +257,7 @@ lsame.c
+ pow_ci.c
+ pow_dd.c
+ pow_di.c
++pow_ii.c
+ pow_ri.c
+ pow_zi.c
+ r_cnjg.c
+@@ -252,6 +267,7 @@ r_sign.c
+ s_cat.c
+ s_cmp.c
+ s_copy.c
++sbdsdc.c
+ sbdsqr.c
+ scsum1.c
+ second.c
+@@ -293,6 +309,7 @@ slacon.c
+ slacpy.c
+ sladiv.c
+ slae2.c
++slaed6.c
+ slaev2.c
+ slaexc.c
+ slag2.c
+@@ -301,6 +318,7 @@ slahrd.c
+ slaic1.c
+ slaln2.c
+ slamch.c
++slamrg.c
+ slange.c
+ slanhs.c
+ slanst.c
+@@ -324,6 +342,18 @@ slarzb.c
+ slarzt.c
+ slas2.c
+ slascl.c
++slasd0.c
++slasd1.c
++slasd2.c
++slasd3.c
++slasd4.c
++slasd5.c
++slasd6.c
++slasd7.c
++slasd8.c
++slasda.c
++slasdq.c
++slasdt.c
+ slaset.c
+ slasq1.c
+ slasq2.c
