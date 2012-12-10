@@ -1,4 +1,3 @@
 sources:
-  "freemat-4.1.0.20110113.tar.xz:"	f86fe121012c51795af7187797ece3ed4914eb36
-  "lapack-3.2.2.tgz:"	a434c45932f6affb654b3abde21dd669f5751633
-  "pow_ii.c:"	715efbd196019e44c9269ace27e50f012913566b
+  "lapack-3.2.2.tgz": a434c45932f6affb654b3abde21dd669f5751633
+  "FreeMat-4.1-Source.tar.gz": 5f05427e3e16a480ff1b347d7adf3e2364d552bb

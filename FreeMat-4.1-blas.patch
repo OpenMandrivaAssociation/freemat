@@ -1,6 +1,7 @@
---- FreeMat-4.0.1-Source/libs/libMath/libDynBlas/blas_dyn_link.cpp.orig	2011-01-12 13:44:20.581973980 -0200
-+++ FreeMat-4.0.1-Source/libs/libMath/libDynBlas/blas_dyn_link.cpp	2011-01-12 13:45:16.790973979 -0200
-@@ -124,7 +124,7 @@ void BlasWrapper::LoadLib( const LibConf
+diff -urN FreeMat-4.1-Source/libs/libMath/libDynBlas/blas_dyn_link.cpp FreeMat-4.1-Source-patched/libs/libMath/libDynBlas/blas_dyn_link.cpp
+--- FreeMat-4.1-Source/libs/libMath/libDynBlas/blas_dyn_link.cpp	2011-11-27 00:27:43.228793406 +0000
++++ FreeMat-4.1-Source-patched/libs/libMath/libDynBlas/blas_dyn_link.cpp	2012-12-01 02:53:25.054224687 +0000
+@@ -124,7 +124,7 @@
  
  void BlasWrapper::DiscoverBlasLibrary( void )
  {
@@ -9,71 +10,15 @@
  	libsettings->beginGroup( ComputerType().c_str() );
  
  	QStringList libs = libsettings->childGroups();
---- FreeMat-4.0.1-Source/tools/blas.ini.orig	2011-01-12 13:45:42.385974004 -0200
-+++ FreeMat-4.0.1-Source/tools/blas.ini	2011-01-12 13:46:08.115973989 -0200
-@@ -1,27 +1,27 @@
--[Win32]
--ACML\libname=libacml_dll.dll
--ACML\capfnames=true
--ACML\prefix=
--ACML\suffix=
--ACML\desc="AMD performance library."
--
--[Linux64]
--ATLAS64\libname=/usr/lib64/atlas/libblas.so
--ATLAS64\capfnames=false
--ATLAS64\prefix=
--ATLAS64\suffix=_
--ATLAS64\desc="ATLAS BLAS. Optimized."
--
--[Linux32]
--ATLAS32\libname=/usr/lib/atlas/libblas.so
--ATLAS32\capfnames=false
--ATLAS32\prefix=
--ATLAS32\suffix=_
--ATLAS32\desc="ATLAS BLAS. Optimized."
--
--[OSX]
--VECLIB\libname=/usr/lib/libblas.dylib
--VECLIB\capfnames=false
--VECLIB\prefix=
--VECLIB\suffix=_
--VECLIB\desc="VecLIB BLAS. Optimized."
-+[Win32]
-+ACML\libname=libacml_dll.dll
-+ACML\capfnames=true
-+ACML\prefix=
-+ACML\suffix=
-+ACML\desc="AMD performance library."
-+
-+[Linux64]
-+ATLAS64\libname=/usr/lib64/atlas/libcblas.so
-+ATLAS64\capfnames=false
-+ATLAS64\prefix=
-+ATLAS64\suffix=_
-+ATLAS64\desc="ATLAS BLAS. Optimized."
-+
-+[Linux32]
-+ATLAS32\libname=/usr/lib/atlas/libcblas.so
-+ATLAS32\capfnames=false
-+ATLAS32\prefix=
-+ATLAS32\suffix=_
-+ATLAS32\desc="ATLAS BLAS. Optimized."
-+
-+[OSX]
-+VECLIB\libname=/usr/lib/libblas.dylib
-+VECLIB\capfnames=false
-+VECLIB\prefix=
-+VECLIB\suffix=_
-+VECLIB\desc="VecLIB BLAS. Optimized."
---- FreeMat-4.0.1-Source/CMakeLists.txt.orig	2011-01-12 14:45:21.509973899 -0200
-+++ FreeMat-4.0.1-Source/CMakeLists.txt	2011-01-12 14:45:28.122973667 -0200
-@@ -319,7 +319,7 @@ libs/libMath/libDynBlas ${QT_LIBRARIES}
- # BLAS is always linked dynamically
- ADD_DEFINITIONS( -DDYN_BLAS )
- 
+diff -urN FreeMat-4.1-Source/src/CMakeLists.txt FreeMat-4.1-Source-patched/src/CMakeLists.txt
+--- FreeMat-4.1-Source/src/CMakeLists.txt	2012-12-01 02:57:06.543612051 +0000
++++ FreeMat-4.1-Source-patched/src/CMakeLists.txt	2012-12-01 02:57:11.436120633 +0000
+@@ -183,7 +183,7 @@
+ if (APPLE)
+ INSTALL( FILES ${PROJECT_SOURCE_DIR}/tools/blas.ini DESTINATION FreeMat.app/Contents/MacOS)
+ else()
 -INSTALL( FILES ${PROJECT_SOURCE_DIR}/tools/blas.ini DESTINATION bin )
 +INSTALL( FILES ${PROJECT_SOURCE_DIR}/tools/blas.ini DESTINATION share/FreeMat )
+ endif()
  
- if( MSVC )
-   add_definitions( -D_CRT_SECURE_NO_DEPRECATE -D_CRT_SECURE_NO_WARNINGS )
+ 

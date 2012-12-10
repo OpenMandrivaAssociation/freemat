@@ -1,0 +1,12 @@
+diff -urN FreeMat-4.1-Source/src/CMakeLists.txt FreeMat-4.1-Source-patched/src/CMakeLists.txt
+--- FreeMat-4.1-Source/src/CMakeLists.txt	2011-11-27 00:27:10.009506359 +0000
++++ FreeMat-4.1-Source-patched/src/CMakeLists.txt	2012-12-01 03:25:35.608102705 +0000
+@@ -89,6 +89,8 @@
+ ${OPENGL_LIBRARIES}
+ ${EXTRA_LIBRARIES}
+ ${OPTIONAL_LIBS}
++suitesparseconfig
++rt
+ )
+ 
+ 
