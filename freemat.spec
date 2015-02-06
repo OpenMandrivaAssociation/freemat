@@ -12,7 +12,7 @@ License:	GPL
 Summary:	Rapid engineering, scientific prototyping and data processing
 # Real version is 4.1 final but extra .1 is needed up update from 4.1.0.20110113
 Version:	4.1.1
-Release:	1
+Release:	2
 URL:		http://freemat.sourceforge.net
 Source0:	%{oname}-%{oversion}-Source.tar.gz
 Source1:	http://www.netlib.org/lapack/lapack-3.2.2.tgz
